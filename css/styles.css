@@ -18,14 +18,14 @@ a {
 	min-height: 100vh;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: minmax(90px, 90px) auto;
+	grid-template-columns: minmax(90px, 90px) auto;/*funciona la transicion*/
 	grid-template-rows: 60px auto;
 	grid-template-areas: "header header"
 						 			  "menu contenido";
 	transition: all .3s ease;
 }
 .contenedor.active {
-	grid-template-columns: minmax(300px, 18%) auto;
+	grid-template-columns: minmax(300px, 18%) auto;/*/tamano minimo y maximo*/
 }
 /***************header*********************/
 
@@ -66,7 +66,7 @@ a {
 	color: #fff;
 	position: relative;
 	top: -4px;
-	margin-right: 4px;
+	margin-right: 10px;
 }
 .header .contenedor-logo .logo{
 	font-family: 'Bebas Neue', cursive;
@@ -141,7 +141,7 @@ a {
 }
 .menu-lateral a{
 	display: block;
-	padding: 15px 35px;
+	padding: 15px 40px;
 	min-width: 800px;
 }
 .menu-lateral a:hover{
@@ -174,9 +174,65 @@ a {
 .main .titulo{
 	margin-bottom: 20px;
 }
-
 .main .grid-videos{
 	display: grid;
-	grid-gap: 40px 20px;
+	grid-gap: 40px 20px;/*espaciado de la grid*/
 	grid-template-columns: repeat(4, 1fr);
+}
+.main .grid-videos  .video{
+	width: 100%;
+	display: block;
+}
+.main .grid-videos  .video img{
+	width: 100%;
+}
+.main .grid-videos  .video img:hover{
+	opacity: 0.5;
+}
+
+/*--------------------------Media Queries-----------------------------*/
+@media screen and (max-width: 1200px){
+	.main .grid-videos{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 992px){
+	.main .grid-videos{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.header .barra-busqueda input{
+		min-width: 90%;
+	}
+	.header .contenedor-logo .logo span{
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	.contenedor{
+		grid-template-rows:auto ;
+	}
+	.header{
+		padding: 20px;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		grid-template-areas: "logo iconos"
+										  "busqueda busqueda";
+	}
+	.header .contenedor-logo .logo span{
+		display: inline;
+	}
+	.header .barra-busqueda input{
+		min-width: auto;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 576px){
+	.main .grid-videos{
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 500px){
+	.header .contenedor-logo .logo span{
+		display: none;
+	}
 }
