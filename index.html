@@ -9,14 +9,65 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div class="contenedor active">
-		<header class="header">header</header>
+	<div class="contenedor active" id="contenedor">
+		<header class="header">
+			<div class="contenedor-logo">
+				<button class="boton-menu" id="boton-menu"><i class="fas fa-bars"></i></button>
+				<a href="#" class="logo"><i class="fas fa-play"></i><span>JhonCode</span></a>
+			</div>
 
-		<nav class="menu-lateral">menu</nav>
+			<div class="barra-busqueda">
+				<input type="text" placeholder="Buscar">
+				<button type="submit"><i class="fas fa-search"></i></button>
+			</div>
 
-		<main class="main">contenido principal</main>
+			<div class="botones-header">
+				<button><i class="fas fa-upload"></i></button>
+				<button><i class="fas fa-th"></i></button>
+				<button><i class="fas fa-bell"></i></button>
+				<a href="#" class="avatar"><img src="img/photo.png" alt="avatar"></a>
+			</div>
+		</header>
+
+		<nav class="menu-lateral">
+			<a href="#" class="active"><i class="fas fa-home"></i>Pagina principal</a>
+			<a href="#"><i class="fas fa-fire"></i>Tendencias</a>
+			<a href="#"><i class="fas fa-star"></i>Suscripciones</a>
+
+			<hr>
+
+			<a href="#"><i class="fas fa-folder"></i>HTML y CSS</a>
+			<a href="#"><i class="fas fa-folder"></i>Responsive Design</a>
+			<a href="#"><i class="fas fa-folder"></i>Bootstrap</a>
+
+			<hr>
+
+			<a href="#"><i class="fas fa-folder"></i>JavaScript</a>
+			<a href="#"><i class="fas fa-folder"></i>React</a>
+			<a href="#"><i class="fas fa-folder"></i>PHP y MYSQL</a>
+		</nav>
+
+		<main class="main">
+			<h3 class="titulo">Videos Recomendados</h3>
+			<div class="grid-videos">
+				<a href="#" class="video">
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+					<img src="https://picsum.photos/500/281?text=PlaceHolder" alt="imagenes de youtobe"></a>
+			</div>
+		</main>
 	</div>
 		<script src="https://kit.fontawesome.com/0161e20908.js" crossorigin="anonymous"></script>
+		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/main.js"></script>
 </body>
 </html>
